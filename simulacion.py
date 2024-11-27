@@ -9,7 +9,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 # Conexión con la base de datos MySQL en Railway
-DATABASE_URL = "mysql+pymysql://user:password@hostname:port/database"
+DATABASE_URL = "mysql://root:hqZnvoLyUozaAIyeIfqznWRGZdelYodv@autorack.proxy.rlwy.net:46731/railway"
 
 # Crear motor de conexión
 engine = create_engine(DATABASE_URL)
