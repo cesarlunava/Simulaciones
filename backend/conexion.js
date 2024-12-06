@@ -1,5 +1,5 @@
 function conectar () {
-const urlDataBase = "mysql://root:hqZnvoLyUozaAIyeIfqznWRGZdelYodv@autorack.proxy.rlwy.net:46731/railway"
+const urlDataBase = "mysql://root:hqZnvoLyUozaAIyeIfqznWRGZdelYodv@mysql.railway.internal:3306/railway"
 
 const connection = mysql.createConnection(urlDataBase);
 
