@@ -30,7 +30,7 @@ app.post('/save-data', (req, res) => {
 
   // Inserta los datos en la base de datos
   connection.query(
-    'INSERT INTO contact_form (id, email, ClavedeModelo, password, Nombre) VALUES (?, , )',
+    'INSERT INTO contact_form (id, email, ClavedeModelo, password, Nombre) VALUES (1, sisrisistemasderiego@gmail.com, 111, PrepApps123, Equipo CCA)',
     [id, email, ClavedeModelo, password, Nombre],
     (error, results, fields) => {
       if (error) {
