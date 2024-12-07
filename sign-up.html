@@ -97,5 +97,33 @@
             <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
         </div>
     </div>
+    <script>
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', (event) => {
+          event.preventDefault();
+    
+          const email = document.getElementById('email').value;
+          const ClavedeModelo = document.getElementById('ClavedeModelo').value;
+          const password = document.getElementById('password').value;
+          const Nombre = document.getElementById('Nombre').value;
+    
+          fetch('/save-data', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password, Nombre })
+          })
+          .then(response => response.text())
+          .then(data => {
+            alert(data);
+            form.reset();
+          })
+          .catch(error => {
+            alert('Error al guardar los datos');
+            console.error('Error:', error);
+          });
+        });
+      </script>
 </body>
 </html>
